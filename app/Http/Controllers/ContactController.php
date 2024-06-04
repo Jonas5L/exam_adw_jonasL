@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
-class ContactController extends controller
+class ContactController extends Controller
 {
     public function index()
     {
@@ -62,7 +62,7 @@ class ContactController extends controller
                 'message' => 'required',
                 'tel' => 'required',
                 'subject' => 'required',
-                'g-recaptcha-response' => 'nullable|recaptchav3:contact,0.5'
+                //'g-recaptcha-response' => 'nullable|recaptchav3:contact,0.5'
             ]);
 
             if ($validator->fails()) {

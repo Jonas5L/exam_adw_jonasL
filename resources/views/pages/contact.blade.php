@@ -31,7 +31,7 @@
     </div>
     <div class="lg:w-2/5 w-full ">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white pb-5">Envoyez-nous un message</h1>
-        <form id="contact-form" action="{{ route('contact.store') }}" method="GET" class="flex flex-col w-full">
+        <form id="contact-form" action="{{ route('contact.store') }}" method="POST" class="flex flex-col w-full">
             @csrf
             {{-- {!! NoCaptcha::renderJs() !!} --}}
                 {{-- {!! RecaptchaV3::field('contact') !!} --}}
@@ -65,12 +65,12 @@
         </form>
     </div>
 </div>
-{{-- <script src="https://www.google.com/recaptcha/api.js?render={{ config('recaptchav3.api_site_key') }}"></script>
-<script>
+{{-- <script src="https://www.google.com/recaptcha/api.js?render={{ config('recaptchav3.api_site_key') }}"></script> --}}
+{{-- <script>
     grecaptcha.ready(function() {
         grecaptcha.execute('{{ config('recaptchav3.api_site_key') }}', {action: 'contact'}).then(function(token) {
             document.getElementById('g-recaptcha-response').value = token;
         });
     });
-</script> --}}
+</script>  --}}
 @stop
